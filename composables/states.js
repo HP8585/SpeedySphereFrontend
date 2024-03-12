@@ -1,7 +1,7 @@
 
 
 export const states = ()=> useState('states', ()=>({
-    authUser: JSON.parse(localStorage.getItem('user')) || null,
+    authUser: null,
     allUsers: null,
     selectedConversation: {
         _id: 21
@@ -12,7 +12,7 @@ export const states = ()=> useState('states', ()=>({
     message: "",
     chatsShown: false,
     sidebarOn: "sidebar",
-    notificationSound: localStorage.notificationSound || true,
+    notificationSound:  true,
     errNotif: false,
     errText: "",
     searchFocused: false

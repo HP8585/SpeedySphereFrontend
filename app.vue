@@ -3,7 +3,11 @@ import io from "socket.io-client";
 
 const beginSocket = ref(false);
 
-onNuxtReady(() => (beginSocket.value = true));
+onNuxtReady(() => {
+  beginSocket.value = true;
+  states().value.notificationSound = localStorage.notificationSound;
+  states().value.authUser = JSON.parse(localStorage.getItem('user'))
+});
 
 watch(
   () => beginSocket.value,
