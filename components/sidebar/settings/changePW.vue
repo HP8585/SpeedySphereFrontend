@@ -80,7 +80,7 @@ const handleSubmit = () => {
   @apply flex flex-col gap-6;
 }
 .changePW-con ul > li {
-  @apply relative flex flex-col relative;
+  @apply relative flex flex-col;
 }
 input {
   @apply border border-slate-300 rounded-md px-2 py-1.5
