@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   runtimeConfig:{
     public:{
-      BASE_URL : "https://speedysphere-backend.vercel.app"
+      BASE_URL : "https://speedyspherebackend.onrender.com"
     }
   }
 })

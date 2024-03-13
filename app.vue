@@ -13,7 +13,7 @@ watch(
   () => beginSocket.value,
   () => {
     if (states().value.authUser) {
-      const socket = io("https://speedysphere-backend.vercel.app", {
+      const socket = io("https://speedyspherebackend.onrender.com", {
         query: {
           userId: states().value.authUser._id,
         },

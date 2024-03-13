@@ -9,7 +9,11 @@ export const useLogin = ()=>{
         isLoading.value = true;
         const jwt = useCookie('jwt')
         try{
-            const res = await axios.post(`https://speedysphere-backend.vercel.app/api/auth/login`, body);
+            const res = await axios.post(`https://speedyspherebackend.onrender.com/api/auth/login`, body, {
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            });
 
           
             localStorage.user = JSON.stringify(res.data?.user);
