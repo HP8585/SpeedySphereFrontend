@@ -1,6 +1,18 @@
 <script setup>
 const blankUser = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHMc46sIJf3WJDdhvo2TXYUKu9fz3u0eFF-TsJ2ztIdA&s';
 
+
+watch(()=> states().value.socket, ()=>{
+states().value.socket.on('profileUpdated', (userUpdated)=>{
+
+  //const index = states().value.allUsers.findIndex(user => user._id === userUpdated._id);
+  if (states().value.selectedConversation?._id === userUpdated?._id) {
+    //states().value.allUsers[index] = userUpdated;
+    states().value.selectedConversation = userUpdated;
+  }
+
+})
+})
 </script>
 
 <template>

@@ -1,7 +1,6 @@
 <script setup>
 const oldPWEye = ref(false),
-  newPWEye = ref(false),
-  confirmPWEye = ref(false);
+  newPWEye = ref(false)
 
 const form = reactive({
   oldPassword: "",
@@ -57,15 +56,8 @@ const handleSubmit = () => {
         </li>
 
         <li>
-          <Icon
-            :name="confirmPWEye ? 'mynaui:eye-slash' : 'mynaui:eye'"
-            size="22"
-            class="eye"
-            color="#94a3b8"
-            @click="confirmPWEye = !confirmPWEye"
-          />
           <input
-            :type="confirmPWEye ? 'text' : 'password'"
+            type="password"
             v-model="form.confirmPassword"
             id="confirmPW"
           />

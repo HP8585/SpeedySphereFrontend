@@ -16,7 +16,8 @@ export const useEditProfile = ()=>{
             })
 
             states().value.authUser = res.data.user;
-            localStorage.user = JSON.stringify(res.data.user)
+            localStorage.user = JSON.stringify(res.data.user);
+            states().value.sidebarOn = "settings";
         }catch(e){
             states().value.errNotif = true;
             states().value.errText = e?.message
