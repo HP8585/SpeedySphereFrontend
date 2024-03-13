@@ -16,8 +16,11 @@ states().value.socket.on('profileUpdated', (userUpdated)=>{
   if (index !== -1) {
     states().value.allUsers[index] = userUpdated;
   }
+});
 
-})
+states().value.socket.on('updateAllUsers', ()=>{
+    getAllUsers()
+  })
 })
 </script>
 
