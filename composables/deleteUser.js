@@ -8,7 +8,7 @@ export const useDeletUser = ()=>{
     const deleteUser = async ()=>{
         isLoading.value = true;
         try{
-            const res = await axios.delete(`https://speedysphere-backend.vercel.app/api/auth/delete/${states().value.authUser?._id}`);
+            const res = await axios.delete(`${config.BASE_URL}/api/auth/delete/${states().value.authUser?._id}`);
             console.log(res.data);
             navigateTo('/login');
             useCookie('jwt').value = null;
