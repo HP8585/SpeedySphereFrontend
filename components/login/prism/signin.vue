@@ -59,7 +59,7 @@ const lowerCaseUsername = computed({
             >
           </div>
         
-        <input type="submit">
+        <input type="submit" :disabled="isLoading" :class="isLoading ? 'loadingg':''">
         <small @click="$emit('showSignup')">Don't have an account?</small>
       </form>
       
@@ -95,6 +95,9 @@ input:focus ~ label {
 }
 input[type="submit"] {
   @apply w-full bg-violet-500 text-white border-none;
+}
+.loadingg{
+  @apply opacity-60 cursor-auto
 }
 .eye{
   @apply absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer

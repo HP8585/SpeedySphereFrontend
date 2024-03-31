@@ -21,7 +21,7 @@
   @apply text-center mt-1 text-[1.1rem]
 }
 img{
-  @apply h-80 mx-auto
+  @apply h-44 mx-auto
 }
 h2{
   @apply text-blue-700 text-xl font-semibold text-center

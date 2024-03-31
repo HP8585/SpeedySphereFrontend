@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+	@apply w-screen h-screen
+}
 
 /* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
 .shake {

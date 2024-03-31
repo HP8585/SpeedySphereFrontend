@@ -12,7 +12,7 @@ const handleSubmit = async () => {
 
 <template>
   <form
-    class="absolute bottom-0 w-full"
+    class="fixed bottom-2 lg:absolute lg:bottom-0 w-full"
     v-show="states().value.selectedConversation._id !== 21"
     @submit.prevent="handleSubmit"
   >

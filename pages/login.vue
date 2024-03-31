@@ -1,16 +1,4 @@
 <script setup>
-// const { login } = useLogin();
-
-// const formData = reactive({
-//   username: "",
-//   password: "",
-// });
-
-// const handleSubmit = async () => {
-//   await login(formData);
-// };
-
-
 
 const prism = ref(null)
 
@@ -32,12 +20,7 @@ definePageMeta({
 
 <template>
  <ErrModal />
-
-<!-- <ul class="nav">
-  <li @click="showLogin()">Login</li>
-  <li @click="showSignup()">Sign up</li>
-  <li @click="showThankYou()">Thank you</li>
-</ul> -->
+  <!-- <button @click="showThankYou">click</button>? -->
 <div class="wrapper">
   <div class="rec-prism" ref="prism">
 
@@ -48,7 +31,6 @@ definePageMeta({
     <LoginPrismThanks/>
   </div>
 </div>
-
 </template>
 
 
@@ -56,11 +38,11 @@ definePageMeta({
 
 /* Dimensions */
 :root {
-  --prism-height: 450px;
-  --prism-length: 450px;
+  --prism-height: 350px;
+  --prism-length: 350px;
   --prism-depth: var(--prism-length);
   --spacing: 20px;
-  --br: 3px;
+  --br: 4px;
 }
 
 /* Colors */
@@ -74,36 +56,34 @@ definePageMeta({
   --green: #7c3aed;
 }
 body{
-  @apply bg-violet-100 w-full h-screen py-20
+  @apply w-screen h-screen bg-violet-100
 }
 .wrapper {
-  width: var(--prism-length);
-  height: var(--prism-height);
+  /* width: var(--prism-length);
+  height: var(--prism-height); */
   /* margin: 60px auto; */
   transform: perspective(1000px) ;
-  text-align: left;
-  @apply mx-auto ;
+  @apply py-20 bg-violet-100 w-fit mx-auto ;
+  width: var(--prism-length);
+  height: var(--prism-height);
 }
 
 .rec-prism {
-  width: 100%;
-  height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transform: translateZ(-100px);
   transition: transform 0.5s ease-in;
+  @apply w-full h-full mt-44;
 }
 
 .face {
   position: absolute;
-  width: var(--prism-length);
-  height: var(--prism-height);
   padding: var(--spacing);
   background: white;
   border: 3px solid var(--green);
-  border-radius: var(--br);
+  border-radius: var(--br);;
+  @apply w-[350px] h-[350px];
 }
-
 
 .face .content .field-wrapper {
   margin-top: calc(var(--spacing) * 1.5);
